@@ -8,7 +8,7 @@ class PaperRepository:
         self.model = model or get_model()
 
     def create(self, paper):
-        emb = self.model.encode(paper.abstract).tolist()
+        emb = self.model.encode(paper.abstract)
         metadata = {
             "title": paper.title,
             "conference": paper.conference,
@@ -58,7 +58,7 @@ class PaperRepository:
         return papers
 
     def semantic_search(self, query: str, limit: int = 3):
-        query_emb = self.model.encode(query).tolist()
+        query_emb = self.model.encode(query)
         res = self.collection.query(query_embeddings=[query_emb], n_results=limit)
         papers = []
         for i in range(len(res["ids"][0])):

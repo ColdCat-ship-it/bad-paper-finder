@@ -55,6 +55,14 @@ async def search_papers(interest: str = Query(..., min_length=3), limit: int = Q
         raise HTTPException(status_code=404, detail="No similar bad ideas found. Yours might actually be original!")
     return results
 
+@router.get("/papers/{paper_id}", response_model=PaperRead)
+async def get_paper_by_id(paper_id: str):
+    """Get a paper by id."""
+    paper = repo.get_by_id(paper_id)
+    if not paper:
+        raise HTTPException(status_code=404, detail="Paper not found")
+    return paper
+
 
 @router.post("/papers/search/keywords", response_model=List[PaperRead])
 async def search_papers_by_keywords(payload: PaperKeywordSearch):
