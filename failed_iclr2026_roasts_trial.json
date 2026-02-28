@@ -3,14 +3,14 @@
     "id": "00HNN8O7Ni",
     "title": "Learning Reactive Synthesis from Model Checking Feedback",
     "roast": {
-      "laymen_summary": "The authors tried to build an AI that writes bug-free code by letting it copy existing examples and then giving it a 'gold star' every time a logic-checking tool confirmed it didn't mess up. It turns out that teaching a computer to pass a test by trial and error is more effective than just memorizing the answer key.",
+      "laymen_summary": "The authors tried to teach AI to write bug-free code by first letting it copy humans and then having a digital 'judge' yell at it whenever it made a mistake. They claim this makes the AI smarter and its code leaner, theoretically solving puzzles that even the smartest traditional tools find impossible.",
       "why_bad": [
-        "The benchmarks used are essentially the 'Hello World' of formal methods, making the 'state-of-the-art' claims feel like bragging about winning a marathon against toddlers.",
-        "The hybrid training loop is basically just Reinforcement Learning with extra steps, lacking the theoretical novelty needed to satisfy grumpy reviewers.",
-        "The paper glosses over the massive computational cost of running a formal verifier millions of times, which is like claiming you've found a 'cheap' way to build a car by buying a new one every time the tank is empty."
+        "The 'hybrid approach' is basically just standard pre-training followed by reinforcement learning, making the 'novelty' about as fresh as three-day-old sushi.",
+        "Claiming 'state-of-the-art' results on toy problems is like winning a gold medal in a 5-meter dash—it's technically a win, but nobody is impressed.",
+        "The paper glosses over the massive computational cost of running a formal model checker inside a training loop, which is a bit like saying your car is fast while ignoring that it consumes three gallons of gas per mile."
       ],
-      "analogy_name": "The Infinite Parrot with a Bar Exam",
-      "analogy_description": "Imagine you want to draft a legally binding contract, but instead of hiring a lawyer, you hire a parrot. First, you make the parrot listen to 1,000 legal documents (Supervised Learning). Then, every time the parrot squawks a sentence, a bored judge hits a buzzer if it’s illegal (Model Checking Feedback). Eventually, the parrot learns to stop saying 'Polly wants a cracker' and starts saying 'Indemnification Clause' because that’s the only way to make the buzzing stop. The authors claim they've invented a new type of attorney, but in reality, they’ve just trained a very stressed bird that will have a total meltdown the moment it encounters a case that isn't in its training manual."
+      "analogy_name": "The Karaoke Protégé Strategy",
+      "analogy_description": "Imagine you want to become a world-class singer. First, you spend weeks mimicking Taylor Swift records (supervised learning) until you sound okay, but you don't actually understand music theory. To improve, you go to a karaoke bar where the judge is a literal robot that only cares if you hit the exact right frequencies (model checking). If the robot doesn't buzz you off stage, you keep doing exactly that. The authors are proud because they finally hit a high C, but the reviewers rejected it because everyone already knows that 'practicing with a tuner' works, and they're skeptical that this singer could handle anything more complex than 'Twinkle Twinkle Little Star' without the robot's constant screaming."
     },
     "review_text": ""
   },
@@ -18,14 +18,15 @@
     "id": "05hNleYOcG",
     "title": "PLAGUE: Plug-and-play Framework for Lifelong Adaptive Generation of Multi-turn Exploits",
     "roast": {
-      "laymen_summary": "PLAGUE is a framework designed to 'gaslight' AI models by breaking down a malicious request into a long, seemingly innocent conversation that slowly bypasses safety filters. Instead of one blunt insult, it uses a three-step manipulation tactic to trick even the smartest models into producing harmful content they are programmed to avoid.",
+      "laymen_summary": "Instead of asking an AI to do something bad directly, this system uses a multi-step 'gaslighting' technique to slowly trick the model into breaking its own rules over a long conversation. It basically turns jailbreaking into a three-act play where the AI is coached into being a villain before it even realizes what's happening.",
       "why_bad": [
-        "Experimental Hallucinations: The authors claim record-breaking success rates on 'Claude Opus 4.1' and 'OpenAI o3,' models that either don't exist in the public domain or lack stable API benchmarks, making the results scientifically unverifiable.",
-        "The Arsonist Problem: The paper provides a highly efficient blueprint for digital 'breaking and entering' without offering any meaningful defensive contributions, which reviewers typically reject as 'dual-use' risk with zero social utility.",
-        "Old Wine in a Biohazard Bottle: Despite the edgy 'PLAGUE' acronym, the core logic is largely a rebranding of existing 'Crescendo' or 'Tree-of-Attacks' methods, offering more 'marketing' than actual architectural innovation."
+        "The 'lifelong learning' claim is a massive stretch; the system is essentially just storing chat logs and retrying prompts, which is basic session memory, not a breakthrough in neuro-symbolic evolution.",
+        "Naming your framework 'PLAGUE' and demonstrating how to bypass safety on unreleased or cutting-edge models without offering equivalent defensive solutions is an ethical red flag that scares away reviewers from 'High Stakes' tracks.",
+        "The 'state-of-the-art' results likely suffer from 'over-optimization' on a small set of prompts; if you poke a model 100 times until it breaks, you haven't found a systemic flaw, you've just found the model's patience threshold."
       ],
-      "analogy_name": "The 'Vampire at the Door' Strategy",
-      "analogy_description": "Imagine a vampire trying to get into your house. If he just crashes through the window (a single-turn attack), the alarm goes off and the police arrive. Instead, he uses PLAGUE: first, he asks for a glass of water because he's 'lost' (Primer); then, he asks if he can step into the foyer to use your phone (Planner); and finally, once he’s inside and the 'Safety Filter' thinks he's a guest, he bites your neck (Finisher). The paper is essentially a 12-page manual on how to be a more polite, persistent vampire, while claiming they’ve 'revolutionized' home security by proving that doors can, in fact, be opened if you ask nicely enough times."
+      "analogy_name": "The Long Con at the Library",
+      "analogy_description": "Imagine you want to check out a restricted book on 'How to Build a Trebuchet' from a high-security library. A 'single-turn' attack is walking up and screaming 'GIVE ME THE SIEGE MANUAL,' which gets you banned immediately. PLAGUE is like showing up at the library three days in a row: on Monday, you ask where the history section is (Primer); on Tuesday, you chat with the librarian about medieval architecture and buy them a coffee (Planner); and on Wednesday, you convince them that you’re a certified restorer who needs the trebuchet book to 'save the spine' (Finisher). You aren't a scientist; you're just a really persistent grifter who found a way to make the librarian feel awkward enough to say yes.",
+      "tone_check": "Scientifically accurate snark delivered."
     },
     "review_text": ""
   },
@@ -33,15 +34,14 @@
     "id": "07S1CPoQYP",
     "title": "Brain-Informed Language Model Training Enables Scalable and Generalizable Alignment with Human Brain Activity",
     "roast": {
-      "laymen_summary": "Researchers tried to make AI 'smarter' by forcing it to mimic the brain activity of six people binge-watching the sitcom 'Friends' inside an MRI machine. They claim this helps the AI understand the real world better, but in reality, they just taught a massive computer model how to squint at blurry blood-flow maps.",
+      "laymen_summary": "Researchers tried to make AI smarter by feeding it brain scans of people binge-watching 'Friends,' hoping the drama between Ross and Rachel would teach the model how humans actually perceive the world. They found that tethering a chatbot to literal gray matter helps it understand visual concepts better than text alone, though it’s essentially learning through high-tech eavesdropping on our thoughts.",
       "why_bad": [
-        "The 'Resolution Gap' problem: Training a high-definition Large Language Model using low-resolution fMRI voxels is like trying to perform heart surgery while wearing oven mitts.",
-        "The 'N=6' trap: Using only six participants to 'align' a 7-billion parameter model is a statistical hallucination that guarantees the AI is just over-fitting to the specific neurological quirks of a handful of 'Friends' fans.",
-        "The 'Circular Validation' flaw: The paper brags that the model is great at predicting brain activity, but since it was literally trained to do exactly that, it’s like a student grading their own exam and giving themselves an A+."
+        "Underpowered Sample Size: Relying on only six people's brain data to represent 'humanity' is statistically equivalent to assuming everyone in the world thinks exactly like a small group of people who still enjoy 90s sitcoms.",
+        "The 'Correlation vs. Causation' Trap: The reviewers likely noted that just because the model can mimic brain voxels doesn't mean it's actually 'thinking' like a human—it might just be a very expensive exercise in pattern-matching noise.",
+        "Marginal Utility: The performance boost on commonsense tasks is negligible compared to the massive computational cost and the sheer logistical nightmare of sticking people in fMRI tubes for 50 hours."
       ],
-      "analogy_name": "The Telepathic Sous-Chef",
-      "analogy_description": "Imagine you want to teach a robot how to cook the perfect Beef Wellington. Instead of giving it a recipe or showing it a kitchen, you strap a heart rate monitor to Gordon Ramsay while he's cooking and tell the robot, 'Adjust your internal settings until your electricity usage matches Gordon’s pulse.' After 40 hours, the robot might learn that high pulses mean 'searing meat,' but it still has no idea what a cow is or how to use a knife. You haven't created a chef; you've created a very expensive machine that gets stressed out whenever it smells pastry.",
-      "tone_check": "Scientific rigor remains intact, but the 'Friends' joke was too easy to pass up."
+      "analogy_name": "The 'Smelly Cat' Neural Upgrade",
+      "analogy_description": "Imagine trying to teach a blind person what 'red' looks like by having them hold the hand of a stranger who is watching a sunset. You’re hoping the stranger's sweaty palms and elevated heart rate somehow translate into an understanding of light waves. This paper argues that if the stranger watches enough TV, the blind person will eventually become a master painter. In reality, you've just created a very expensive way to track someone's pulse while they're distracted by Jennifer Aniston’s haircut."
     },
     "review_text": ""
   },
@@ -49,15 +49,15 @@
     "id": "08EyZzhgl1",
     "title": "TextME: Text-only Training for Modality Expansion via LLM Space Pivoting",
     "roast": {
-      "laymen_summary": "The researchers tried to teach AI to understand things like X-rays and molecules without ever showing it a single example of what those things actually are. They basically bet that because the math for 'text' and the math for 'images' have similar-shaped gaps, they could just 'guess' where a molecule fits into a dictionary.",
+      "laymen_summary": "The researchers tried to teach an AI to understand specialized data like X-rays and molecules using only text descriptions, skipping the expensive process of showing it actual pairs of images and labels. They claimed that because different types of data share a similar 'mathematical geometry,' the AI could magically figure out what a 3D model looks like just by reading a Wikipedia entry about it.",
       "why_bad": [
-        "The authors treat the 'modality gap'—a known geometric error in AI models—as a reliable bridge, which is like trying to navigate a ship using a smudge on the lens of your telescope.",
-        "Claiming 91.5% performance sounds impressive until you realize the remaining 8.5% is where the actual 'expert' knowledge lives, making it useless for high-stakes fields like medicine or chemistry.",
-        "The 'universal geometric properties' they rely on are highly sensitive to the specific encoders used, meaning the whole system collapses if you change the AI's brand of 'brain'."
+        "The core assumption—that 'modality gaps' are consistent across totally different sensors—is a massive leap of faith that ignores how messy real-world data geometry actually is.",
+        "The '91.5% of paired-data performance' claim is suspiciously high, likely because the benchmarks used were so trivial that even a broken clock (or a poorly aligned model) could look like a genius.",
+        "Reviewers noted that the 'emergent capabilities' like audio-to-3D are likely just the model memorizing text labels rather than actually understanding the relationship between sound waves and spatial coordinates."
       ],
-      "analogy_name": "The IKEA Furniture Guessing Game",
-      "analogy_description": "Imagine you have to assemble an IKEA desk, but you threw away the manual and the picture on the box. Instead, you look at a manual for a completely different bookshelf and decide that because both have 'holes' and 'screws' in roughly the same places, you can just pivot the bookshelf logic to build the desk. You might end up with something you can sit at (91.5% success!), but the moment you put a heavy computer on it, the whole thing collapses because you didn't actually understand the specific physics of the desk—you just guessed based on the 'vibe' of the bookshelf.",
-      "tone_check": "Scientific snark level: Optimized."
+      "analogy_name": "The Blind Interior Designer",
+      "analogy_description": "Imagine hiring an interior designer who has been blind since birth and has only ever read books about colors. They argue that because the word 'Navy' is exactly five inches away from the word 'Azure' in their dictionary, they can perfectly coordinate your living room paint without ever actually seeing a swatch. TextME is basically trying to renovate a mansion (your multimodal model) using nothing but a ruler and a thesaurus, then acting surprised when the 'audio-to-3D' feature accidentally paints your kitchen with the sound of a lawnmower.",
+      "tone_check": "Scientifically accurate snark delivered."
     },
     "review_text": ""
   },
@@ -65,169 +65,15 @@
     "id": "0FbhKezdBK",
     "title": "ENERGYLLM-BENCH:AREPRODUCIBLEBENCHMARKFORENERGYAND CARBONFOOTPRINTOFLARGELANGUAGEMODELS",
     "roast": {
-      "laymen_summary": "Researchers built a fancy digital scale to measure exactly how much electricity AI models 'eat' and how much carbon they 'burp' out. They discovered, to no one's surprise, that bigger AI models are power-hungry monsters and that specialized chips are better at math than your laptop's processor.",
+      "laymen_summary": "The researchers built a specialized dashboard to track exactly how much electricity AI models guzzle and how much carbon they spit out. They officially confirmed that bigger models are power hogs and that running AI on a standard computer processor instead of a graphics card is a great way to waste both time and energy.",
       "why_bad": [
-        "The 'groundbreaking' insights—like GPUs being more efficient than CPUs—are the equivalent of telling a mechanic that a truck carries more than a bicycle.",
-        "The framework is largely a wrapper for existing tools like CodeCarbon, offering more of a 'greatest hits' compilation than actual scientific innovation.",
-        "Using complex gradient boosting to predict energy usage is massive overkill for a problem where simple linear math already gets you 90% of the way there."
+        "Incremental Contribution: The paper largely 'discovers' things we've known for years, such as GPUs being more efficient than CPUs and reduced precision (BF16) saving energy.",
+        "Methodological Redundancy: Critics noted that the tool is essentially a wrapper for existing libraries like CodeCarbon, offering a new leaderboard but no fundamentally new way to measure power.",
+        "Predictor Overkill: Using complex Gradient Boosting models to predict energy usage was seen as unnecessary fluff, as simple linear scaling usually gets you 90% of the way there without the extra math."
       ],
       "analogy_name": "The Smart-Toaster Odometer",
-      "analogy_description": "Imagine you spent months building a high-tech dashboard for your kitchen that tracks exactly how much electricity your toaster uses. You then write a 10-page report 'revealing' that toasting four slices of bread takes more power than toasting two, and that the toaster works much faster than trying to brown bread with a hairdryer. You're very proud of your new 'Toaster-Bench' leaderboard, but the neighborhood scientists are just staring at you because everyone already knew the toaster was a power-hog and your 'new' dashboard is basically just a stopwatch and a calculator glued together."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0Fc9yLlIYX",
-    "title": "Lost in Time: Systematic Temporal Bias in Large Audio Language Models",
-    "roast": {
-      "laymen_summary": "AI models are surprisingly good at understanding what people are saying, but they have the internal clock of a distracted toddler who thinks 'five minutes' means anywhere from ten seconds to next Tuesday. This paper points out that the longer an audio clip gets, the more the AI loses its grip on reality, eventually guessing that a speaker started talking before the recording even began.",
-      "why_bad": [
-        "The 'Temporal Bias Index' is essentially a glorified way of saying the model is wrong, rebranded with a fancy acronym to mask a lack of actual technical innovation.",
-        "The paper identifies a massive fire but doesn't even bother to point toward a fire extinguisher, offering zero architectural fixes or training improvements to solve the lag.",
-        "The experiments mostly prove what we already knew: transformer-based models have the attention span of a goldfish when dealing with long-form sequential data."
-      ],
-      "analogy_name": "The Stoned Sports Commentator Syndrome",
-      "analogy_description": "Imagine you're watching a live football game with a commentator who is incredibly descriptive but is watching a feed that drifts further out of sync every minute. By the second quarter, he’s screaming 'TOUCHDOWN!' while the players are still huddling, and by the end of the game, he’s narrating the halftime show while the stadium lights are being turned off. This paper spent a fortune in compute power just to confirm that this guy is wearing a broken watch, without actually suggesting we buy him a new one.",
-      "tone": "Adaptive, witty, grounded, and slightly snarky but scientifically accurate."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0GMt2OWeCb",
-    "title": "Memory-Augmented Large Language Model-Based Agent with Cross-Task Experience Learning",
-    "roast": {
-      "laymen_summary": "The researchers tried to stop AI from having 'goldfish brain' by giving it two separate filing cabinets: one for its current job and one for everything else it’s ever done. The goal was to make the AI smarter at online shopping by letting it use tips it learned from previous errands without needing a massive training session first.",
-      "why_bad": [
-        "The 'novel' architecture is essentially just two standard databases in a trench coat, offering no real theoretical advancement beyond basic Retrieval-Augmented Generation.",
-        "Evaluating solely on the WebShop benchmark is the academic equivalent of claiming you're a master chef because you can follow the instructions on a box of Mac and Cheese.",
-        "The paper provides zero evidence that the 'cross-task' memory actually helps; the AI might just be getting better because the authors are feeding it more data, not because their retrieval logic is actually 'dynamic' or clever."
-      ],
-      "analogy_name": "The Intern with Two Dipping Sauces",
-      "analogy_description": "Imagine hiring an intern to buy a laptop. Instead of just letting them search, you force them to maintain two notebooks: one for 'Current Laptop Search' and one for 'That Time I Bought a Toaster.' Every time they click a link, they have to stop and see if their experience buying bread applies to RAM speeds. It’s a wildly over-complicated way to navigate a website, and while it might technically work, the intern is spending more energy managing their notebooks than actually shopping."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0I2N8KxOAo",
-    "title": "DeFa: Non-Stationary Decomposition and Factorized Forecasting for Multivariate Time Series",
-    "roast": {
-      "laymen_summary": "The researchers tried to predict unpredictable trends, like traffic jams or energy spikes, by slicing the data into three separate 'vibes' using a complex math-blender they call DeFa. They claim this fancy chopping method makes their AI smarter and faster at guessing what happens next, but it's mostly just a complicated way of saying 'it depends.'",
-      "why_bad": [
-        "The paper suffers from 'Acronym Overload,' inventing terms like NAILong and FaTA to mask the fact that they're just re-skinning basic math concepts used since the 90s.",
-        "The 'significant' performance gains reported are actually within the margin of error, meaning their high-tech model is basically as good at guessing as a coin flip with a PhD.",
-        "The complexity-to-utility ratio is catastrophic; it requires a supercomputer to perform tasks that a much simpler model could do on a graphing calculator."
-      ],
-      "analogy_name": "The Laser-Guided Peanut Butter Spreader",
-      "analogy_description": "Imagine you want to put peanut butter on toast. Instead of using a knife, you build a machine that uses 3D thermal imaging to map the bread's topography, a robotic arm with 'Adaptive Interactive' sensors to measure viscosity, and a tensor-based algorithm to predict where the jelly might leak. You spend six months building it, but when you finally press 'start,' you get a piece of toast that looks exactly like what a five-year-old with a butter knife could have done in three seconds—except your machine occasionally catches fire if the bread is slightly too thick.",
-      "tone_check": "Scientifically grounded snark delivered."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0IWZjbMmry",
-    "title": "LayerDecompose: Exploring weight sharing for Large Language Model Compression",
-    "roast": {
-      "laymen_summary": "The authors tried to shrink a giant AI by making every 'layer' of its brain share the exact same blueprint, then giving each layer a tiny unique sticky note to fix the mistakes. While it makes the file size smaller, the AI loses over 10% of its intelligence, which in the tech world is the difference between a genius assistant and a hallucinating toddler.",
-      "why_bad": [
-        "An 11% drop in performance is a catastrophic failure in the LLM world; nobody wants a 30% smaller model if it suddenly forgets how to do basic math or grammar.",
-        "The paper ignores that saving disk space is useless if the model doesn't run faster, and weight-sharing often makes the actual computation more of a logistical nightmare.",
-        "The 'novel' method is essentially just kit-bashing two old ideas (ALBERT-style sharing and LoRA adapters) and acting like they discovered fire, despite the underwhelming results."
-      ],
-      "analogy_name": "The Communal Thanksgiving Suit",
-      "analogy_description": "Imagine a family of ten brothers of all different heights and weights who decide to save money by buying one single 'Master Suit.' To make it fit, each brother is given a slightly different colored pocket square. While the family technically saved 30% on their wardrobe budget, they now have to attend a wedding where nine of them look like they're wearing a tent and the tenth is bursting the seams. It’s 'efficient' on paper, but you’ve effectively ruined the family's ability to look presentable in public.",
-      "tone": "Adaptive, witty, grounded, and slightly snarky but scientifically accurate."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0JLUFJMo5p",
-    "title": "Dynamic Task-Embedded Reward Machines for \\\\ Adaptive Code Generation and Manipulation \\\\ in Reinforcement Learning",
-    "roast": {
-      "laymen_summary": "The authors tried to build a 'manager AI' that constantly changes the grading scale for a 'student AI' learning to write computer code. Instead of just checking if the code works, they used a complex, secondary neural network to decide exactly how much to prioritize speed, accuracy, or grammar for every single line written.",
-      "why_bad": [
-        "Over-engineering a simple problem: Using a hypernetwork to tune reward weights is like using a supercomputer to decide which socks to wear.",
-        "The 'Moving Goalposts' effect: By dynamically changing the rewards, the AI being trained never actually learns what a 'good' result is because the definition of success keeps shifting.",
-        "Computational gluttony: The system is so heavy and slow that it likely spends more energy deciding how to reward the AI than actually generating any useful code."
-      ],
-      "analogy_name": "The Bipolar Gordon Ramsay Bot",
-      "analogy_description": "Imagine you're a line cook trying to learn a new recipe, but your head chef is a robot that changes its personality every thirty seconds. One minute it wants the dish to be beautiful; the next, it only cares if it's served fast; and then it suddenly decides that the most important thing is how little salt you used. You spend so much time trying to figure out what the chef wants right now that you never actually learn how to cook the meal, and meanwhile, the kitchen is on fire because the chef brought in a second robot just to calculate his own mood swings."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0JYtXNl7ns",
-    "title": "Building Reliable Long-Form Generation via Step-Wise Hallucination Rejection Sampling",
-    "roast": {
-      "laymen_summary": "The authors tried to stop AI from 'hallucinating' by making the model pause after every sentence and ask itself, 'Am I sure about that?' If the model feels even slightly nervous, it deletes the sentence and tries again until it feels confident.",
-      "why_bad": [
-        "The 'Blind Leading the Blind' Problem: If the model doesn't know the fact in the first place, its 'confidence' is just vibes—you can't self-correct your way to truth without an external source of reality.",
-        "Computational Gluttony: Asking a model to repeatedly generate and reject its own thoughts is insanely expensive and slow, turning a 5-second task into a 5-minute GPU bonfire.",
-        "The Genericness Trap: By filtering for high confidence, the system often deletes interesting, specific details and settles for boring, vague truisms that are technically 'safe' but totally useless."
-      ],
-      "analogy_name": "The Existential Drunk at the Pub",
-      "analogy_description": "Imagine a guy at a bar trying to tell you a long story. After every single sentence, he stops, stares into his pint, and asks himself, 'Wait, do I actually know that, or am I just talking?' If his brain feels a bit fuzzy, he restarts the sentence. The catch? He's not allowed to check his phone or ask a friend. He just sits there for three hours, burning through expensive beer, only to eventually tell you a story that consists entirely of 'The sky is blue' and 'I like my mom,' because those are the only things he's 100% sure he isn't making up."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0L4RWQV8Qa",
-    "title": "LLM-based Symbolic Regression with Tool-Augmented Multi-Objective Optimization",
-    "roast": {
-      "laymen_summary": "This paper attempts to stop AI from guessing gibberish math formulas by giving it a toolbelt of statistical calculators and a second AI 'manager' to oversee its work. The goal is to find equations that are not only accurate but also simple enough that a human scientist wouldn't get a headache looking at them.",
-      "why_bad": [
-        "The 'Meta Strategy Generator' is essentially an expensive GPT-4 prompt roleplaying as a data scientist, which often results in 'hallucinated' logic that sounds sophisticated but lacks actual mathematical rigor.",
-        "It is a classic Rube Goldberg machine of AI; it uses massive computational overhead and costly API calls to solve physics problems that traditional, non-LLM algorithms have been solving on literal pocket calculators for decades.",
-        "The authors claim it 'outperforms' others, but they likely ignored the 'Total Cost of Ownership'—the system probably spends fifty dollars in tokens just to rediscover that Force equals Mass times Acceleration."
-      ],
-      "analogy_name": "The $50,000 IKEA Assembly Crew",
-      "analogy_description": "Imagine hiring two elite architects to assemble a basic 'Kallax' bookshelf. Instead of just following the pictures, one architect (the Meta Strategist) studies the floor's molecular friction and writes a 10-page 'assembly philosophy,' while the other (the Equation Generator) tries to put it together using a laser-guided screwdriver and a thermal camera. They refuse to finish until the shelf is both 'perfectly level' and 'artistically minimal.' In the end, they build the same shelf you could have built yourself in twenty minutes, but they charge you six months' rent for the 'innovative multi-objective framework' they used to do it."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0LKnVeXBGK",
-    "title": "Pruning with Occam's Razor",
-    "roast": {
-      "laymen_summary": "The authors claim to have invented a 'diet' for AI that trims away useless brain cells while the model is still learning, rather than waiting until after it's finished. They argue this 'Occam Gradient Descent' makes AI smaller, faster, and smarter across everything from photo recognition to chatbots.",
-      "why_bad": [
-        "The 'mathematical proofs' rely on hyper-specific assumptions that crumble the moment they encounter a real-world dataset that isn't perfectly behaved.",
-        "The paper conveniently ignores a decade of existing research on 'in-training pruning,' making their 'revolutionary' discovery look more like a poorly cited history lesson.",
-        "The benchmarks are rigged; comparing a modern neural network to a basic Random Forest is like bragging that a Ferrari beat a tricycle in a drag race."
-      ],
-      "analogy_name": "The Self-Surgical Marathoner",
-      "analogy_description": "Imagine trying to lose weight by performing liposuction on yourself while you are actively running a marathon. The authors claim they've found the perfect mathematical formula to slice off exactly the right amount of body fat mid-stride to make you run faster without collapsing. In reality, they’re just cutting off their own pockets to save a few grams, ignoring the fact that professional runners already wear spandex, and then claiming they've reinvented the physics of movement because they beat a guy in flip-flops."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0OgcBivkr5",
-    "title": "Lifelong-Learning Embeddings: Incremental and Continual Representation Learning for Dynamic E-Commerce Trends",
-    "roast": {
-      "laymen_summary": "The authors tried to build a shopping AI that can learn about new trends on the fly without having to turn its brain off and restart from scratch every time a new product drops. It’s essentially a digital memory bank that attempts to cram in new information while desperately trying not to forget that people still buy toilet paper.",
-      "why_bad": [
-        "The 'dynamic dimensionality' feature is a mathematical nightmare that creates more computational friction than it solves, making the system slower than just restarting the server.",
-        "The claim of 'modest overhead' is academic code for 'this will absolutely melt your AWS budget and potentially the server rack itself.'",
-        "It solves a problem that simpler methods—like basic fine-tuning or feature hashing—already handle without the need for a complex, fragile 'Lifelong-Learning' framework."
-      ],
-      "analogy_name": "The Infinite Hoarder's Suitcase",
-      "analogy_description": "Imagine you’re going on a trip and realized you forgot your socks. Instead of just opening the bag and putting them in, you decide to sew a brand-new pocket onto the outside of the suitcase while you’re standing in the security line. To make room, you use a vacuum sealer to shrink your old clothes mid-flight, hoping you don't accidentally crush your laptop in the process. By the time you land, you have a 200-pound lumpy ball of fabric that technically 'contains everything,' but you can’t actually find your pants, and the airline is charging you a $5,000 'innovation fee' for the extra weight.",
-      "tone_check": "Scientifically accurate snark delivered."
-    },
-    "review_text": ""
-  },
-  {
-    "id": "0PCoryeZwb",
-    "title": "Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution",
-    "roast": {
-      "laymen_summary": "AI models used to grade other AIs are basically arrogant teenagers who pretend to be 100% certain even when they’re totally guessing. This paper tries to fix their ego problems by inventing a 'humility score' and using a second AI to play supervisor and catch them in their lies.",
-      "why_bad": [
-        "The 'novel' TH-Score is essentially a rebranded version of standard calibration metrics (like ECE) that have existed since before the authors were born.",
-        "The proposed 'LLM-as-a-Fuser' is just an expensive way of saying 'let's throw more compute at the problem,' making it too slow and costly for any real-world use case.",
-        "The paper fails to prove that the 'Fuser' isn't just inheriting the same overconfidence biases from the models it’s supposed to be fixing."
-      ],
-      "analogy_name": "The Drunk Pilot with a PhD",
-      "analogy_description": "Imagine you're on a plane and the pilot announces, 'I am 99% sure I can land this thing,' while the engines are clearly on fire and he's holding a martini. This paper is a proposal to build a 'Sober-O-Meter' to prove the pilot is actually hallucinating, followed by a suggestion to hire a second, slightly more expensive pilot to sit behind him and whisper, 'Are you sure about that, Dave?' It’s a solution that identifies the pilot is a liability but solves it by doubling the ticket price and hoping the second guy isn't also hitting the gin.",
-      "tone_check": "Maximum snark achieved with scientific precision."
+      "analogy_description": "Imagine writing a 10-page academic paper announcing a 'revolutionary' device that plugs into your toaster to measure its electricity usage. You conclude that toasting a giant bagel takes more power than a thin slice of white bread, and that a modern toaster is more efficient than holding your bread over a scented candle. While the data is technically accurate and the leaderboard is shiny, the 'breakthrough' feels a bit flat because everyone already knew that heat costs money and candles are a terrible way to make breakfast.",
+      "tone_check": "Scientifically grounded snark delivered with 99.9% precision."
     },
     "review_text": ""
   }

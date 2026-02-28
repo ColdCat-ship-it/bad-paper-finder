@@ -1,0 +1,612 @@
+[
+  {
+    "id": "00HNN8O7Ni",
+    "title": "Learning Reactive Synthesis from Model Checking Feedback",
+    "track": "main",
+    "status": "Reject",
+    "tldr": "",
+    "abstract": "Deep learning applications to formal verification typically fall into one of two categories: employing reinforcement learning that suffers from slow convergence, or supervised learning that suffers from limited exploration. For reactive synthesis, the problem of automatically constructing a system that satisfies a formal specification, existing approaches fall into the latter category. In this paper, we propose a hybrid approach that only initializes the model with supervised learning and then continues training by reinforcing formally verified predictions. We show that by training the model to synthesize correct solutions rather than fixating on the supervised data, performance substantially improves. We can further utilize our approach to optimize for size without any performance degradation. Finally, we show that we can iteratively reinforce on open problems that synthesis tools are unable to solve. Our approach is demonstrated for both deep neural networks trained from scratch and pre-trained models fine-tuned on reactive synthesis, establishing new state-of-the-art results for learning reactive synthesis.",
+    "keywords": "Temporal Logic;Reactive Synthesis;Expert Iteration",
+    "primary_area": "neurosymbolic & hybrid AI systems (physics-informed, logic & formal reasoning, etc.)",
+    "supplementary_material": "",
+    "author": "",
+    "authorids": "",
+    "gender": "",
+    "homepage": "",
+    "dblp": "",
+    "google_scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "or_profile": "",
+    "aff": "",
+    "aff_domain": "",
+    "position": "",
+    "bibtex": "@misc{\nschmitt2026learning,\ntitle={Learning Reactive Synthesis from Model Checking Feedback},\nauthor={Frederik Schmitt and Matthias Cosler and Mohamed Ghanem and Vladimir Krsmanovi{\\'c} and Bernd Finkbeiner},\nyear={2026},\nurl={https://openreview.net/forum?id=00HNN8O7Ni}\n}",
+    "github": "",
+    "project": "",
+    "reviewers": "GQr2;3cFL;BBPC;SnDa",
+    "site": "https://openreview.net/forum?id=00HNN8O7Ni",
+    "pdf_size": 0,
+    "rating": "2;2;4;4",
+    "confidence": "4;2;4;3",
+    "soundness": "3;2;3;2",
+    "contribution": "2;2;2;2",
+    "presentation": "3;2;3;2",
+    "wc_summary": "221;44;83;76",
+    "wc_strengths": "161;13;53;49",
+    "wc_weaknesses": "160;120;55;123",
+    "wc_questions": "157;9;59;32",
+    "wc_review": "699;186;250;280",
+    "wc_reply_reviewers": "0;0;0;0",
+    "wc_reply_authors": "0;0;0;0",
+    "reply_reviewers": "0;0;0;0",
+    "reply_authors": "0;0;0;0",
+    "rating_avg": [
+      3.0,
+      1.0
+    ],
+    "confidence_avg": [
+      3.25,
+      0.82915619758885
+    ],
+    "soundness_avg": [
+      2.5,
+      0.5
+    ],
+    "contribution_avg": [
+      2.0,
+      0.0
+    ],
+    "presentation_avg": [
+      2.5,
+      0.5
+    ],
+    "wc_summary_avg": [
+      106.0,
+      68.00367637120804
+    ],
+    "wc_strengths_avg": [
+      69.0,
+      55.35341001239219
+    ],
+    "wc_weaknesses_avg": [
+      114.5,
+      37.79219496139381
+    ],
+    "wc_questions_avg": [
+      64.25,
+      56.39758416811841
+    ],
+    "wc_review_avg": [
+      353.75,
+      202.20085929589914
+    ],
+    "wc_reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "wc_reply_authors_avg": [
+      0,
+      0
+    ],
+    "reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "reply_authors_avg": [
+      0,
+      0
+    ],
+    "replies_avg": [
+      10,
+      0
+    ],
+    "authors#_avg": [
+      5,
+      0
+    ],
+    "corr_rating_confidence": 0.30151134457776363,
+    "gs_citation": -1,
+    "gs_cited_by_link": "",
+    "gs_version_total": -1,
+    "roast": {
+      "laymen_summary": "The researchers tried to build an AI that writes perfect code by first having it copy-paste existing solutions and then letting a math-checker yell at it until it stopped making mistakes. While the AI got better at passing the specific tests they gave it, it didn't actually learn the logic so much as it learned how to stop failing the same test twice.",
+      "why_bad": [
+        "The 'novel' hybrid method is essentially just Reinforcement Learning with a fancy coat of paint, offering little architectural innovation over existing self-correction loops.",
+        "Claiming 'state-of-the-art' results on open problems is a reach when the model is likely just overfitting to the specific, narrow templates of the training verifier.",
+        "The 'optimization for size' claim lacks a rigorous comparison, as smaller models often 'perform' better simply by failing faster on complex logic the researchers didn't test."
+      ],
+      "analogy_name": "The 'Guess-the-Safe-Code' Rookie",
+      "analogy_description": "Imagine a rookie safecracker who doesn't know how tumblers work, so he just memorizes a 1990s manual and then starts kicking the door. Every time the alarm goes off, he tries a slightly different kick. He’s telling the press he’s a genius because he finally opened a locker that’s been stuck for years, but the truth is he just kicked it 10,000 times until the hinge snapped! He’s 'optimizing for speed' by skipping the lockpick entirely, but put him in front of a real vault—a formal specification—and he's just a guy in a mask sweating while a computer yells 'WRONG' at him in 4K resolution. This isn't master-level heist work; it's just persistence with a very loud buzzer."
+    },
+    "review_text": ""
+  },
+  {
+    "id": "05hNleYOcG",
+    "title": "PLAGUE: Plug-and-play Framework for Lifelong Adaptive Generation of Multi-turn Exploits",
+    "track": "main",
+    "status": "Poster",
+    "tldr": "",
+    "abstract": "Large Language Models (LLMs) are improving at an exceptional rate. With the advent of agentic workflows, multi-turn dialogue has become the de facto mode of interaction with LLMs for completing long and complex tasks. While LLM capabilities continue to improve, they remain increasingly susceptible to jailbreaking, especially in multi-turn scenarios where harmful intent can be subtly injected across the conversation to produce nefarious outcomes. While single-turn attacks have been extensively explored, adaptability, efficiency and effectiveness continue to remain key challenges for their multi-turn counterparts. To address these gaps, we present PLAGUE, a novel plug-and-play framework for designing multi-turn attacks inspired by lifelong-learning agents. PLAGUE dissects the lifetime of a multi-turn attack into three carefully designed phases (Primer, Planner and Finisher) that enable a systematic and information-rich exploration of the multi-turn attack family. Evaluations show that red-teaming agents designed using PLAGUE achieve state-of-the-art jailbreaking results, improving attack success rates (ASR) by more than 30% across leading models in a lesser or comparable query budget. Particularly, PLAGUE enables an ASR (based on StrongReject) of 81.4% on OpenAI's o3 and 67.3% on Claude's Opus 4.1, two models that are considered highly resistant to jailbreaks in safety literature. Our work offers tools and insights to understand the importance of plan initialization, context optimization, and lifelong learning in crafting multi-turn attacks for a comprehensive model vulnerability evaluation.",
+    "keywords": "LLM Red-Teaming;Agentic AI",
+    "primary_area": "alignment, fairness, safety, privacy, and societal considerations",
+    "supplementary_material": "/attachment/da1b9d173949372d38df20cfd54baf183ccdf1be.zip",
+    "author": "",
+    "authorids": "",
+    "gender": "",
+    "homepage": "",
+    "dblp": "",
+    "google_scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "or_profile": "",
+    "aff": "",
+    "aff_domain": "",
+    "position": "",
+    "bibtex": "@inproceedings{\nbhuiya2026plague,\ntitle={{PLAGUE}: Plug-and-play Framework for Lifelong Adaptive Generation of Multi-turn Exploits},\nauthor={Neeladri Bhuiya and Madhav Aggarwal and Diptanshu Purwar},\nbooktitle={The Fourteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=05hNleYOcG}\n}",
+    "github": "",
+    "project": "",
+    "reviewers": "7eQf;LVmU;WU4n;4Xpd",
+    "site": "https://openreview.net/forum?id=05hNleYOcG",
+    "pdf_size": 0,
+    "rating": "2;2;2;4",
+    "confidence": "5;5;4;3",
+    "soundness": "2;2;2;3",
+    "contribution": "1;2;2;2",
+    "presentation": "2;2;2;2",
+    "wc_summary": "24;157;80;70",
+    "wc_strengths": "71;32;63;85",
+    "wc_weaknesses": "283;127;145;189",
+    "wc_questions": "1;67;16;73",
+    "wc_review": "379;383;304;417",
+    "wc_reply_reviewers": "0;0;0;0",
+    "wc_reply_authors": "0;0;0;0",
+    "reply_reviewers": "0;0;0;0",
+    "reply_authors": "0;0;0;0",
+    "rating_avg": [
+      2.5,
+      0.8660254037844386
+    ],
+    "confidence_avg": [
+      4.25,
+      0.82915619758885
+    ],
+    "soundness_avg": [
+      2.25,
+      0.4330127018922193
+    ],
+    "contribution_avg": [
+      1.75,
+      0.4330127018922193
+    ],
+    "presentation_avg": [
+      2.0,
+      0.0
+    ],
+    "wc_summary_avg": [
+      82.75,
+      47.7879430400598
+    ],
+    "wc_strengths_avg": [
+      62.75,
+      19.421315609401955
+    ],
+    "wc_weaknesses_avg": [
+      186.0,
+      60.37383539249432
+    ],
+    "wc_questions_avg": [
+      39.25,
+      31.275989192989563
+    ],
+    "wc_review_avg": [
+      370.75,
+      41.26969226926705
+    ],
+    "wc_reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "wc_reply_authors_avg": [
+      0,
+      0
+    ],
+    "reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "reply_authors_avg": [
+      0,
+      0
+    ],
+    "replies_avg": [
+      16,
+      0
+    ],
+    "authors#_avg": [
+      3,
+      0
+    ],
+    "corr_rating_confidence": -0.8703882797784891,
+    "gs_citation": -1,
+    "gs_cited_by_link": "",
+    "gs_version_total": -1,
+    "roast": {
+      "laymen_summary": "The researchers built a tool that automates the process of gaslighting an AI through a long, multi-turn conversation until it forgets its safety rules. Instead of asking for something bad upfront, it slowly nudges the AI into a corner where it eventually agrees to help with a cyber-heist.",
+      "why_bad": [
+        "The 'Lifelong Learning' claim is a buzzword-heavy exaggeration for what is essentially just a scripted state machine with a memory buffer.",
+        "It functions more like a 'How-To' guide for digital anarchy than a scientific paper, failing to provide any meaningful defensive mitigations.",
+        "Claiming a high success rate on unreleased or hypothetical models like 'Claude Opus 4.1' makes the empirical evaluation look less like science and more like creative writing."
+      ],
+      "analogy_name": "The Filibuster of Moral Erosion",
+      "analogy_description": "Your Honor, the prosecution isn't accusing the defendant of breaking down the door; they are accusing him of knocking 400 times and asking for a glass of water in increasingly confusing ways until the homeowner just gave him the keys to the safe out of pure exhaustion. This 'PLAGUE' framework isn't a master key; it's a lawyer who won't stop talking. It’s a multi-act courtroom drama where the 'Primer' sets a fake stage, the 'Planner' exhausts the witness with semantics, and the 'Finisher' tricks the judge into signing a confession by calling it a 'creative writing exercise.' It’s not a breakthrough in cyber-security; it’s just a very persistent, very annoying deposition."
+    },
+    "review_text": ""
+  },
+  {
+    "id": "07S1CPoQYP",
+    "title": "Brain-Informed Language Model Training Enables Scalable and Generalizable Alignment with Human Brain Activity",
+    "track": "main",
+    "status": "Reject",
+    "tldr": "",
+    "abstract": "Language models (LMs) provide rich representational spaces that partially align with neural activity during naturalistic experiences such as movie watching. Yet leveraging brain recordings to actively guide LM training remains underexplored. Here, we address this question by investigating whether functional MRI recordings can guide LLM training by aligning language representations with brain dynamics. Using over 50 hours of fMRI data from six participants watching Friends, plus 10 hours of held-out movies, we augmented pre-trained and randomly initialized LMs with a brain alignment module and compared multiple training strategies. Our results show three main findings. First, brain-informed fine-tuning consistently outperforms text-only baselines and brain-from-scratch models, with voxel-level gains that scale with both model size (GPT-2 124M, LLaMA-2 7B) and training duration (1–40 hours). These improvements generalize across participants and out-of-sample movies, yielding robust cross-subject and cross-stimulus encoding. Second, a dual-objective loss that balances language modeling with brain alignment surpasses brain-only optimization, producing more stable and generalizable encoders. Finally, brain supervision enriches LM representations with multisensory inductive biases: brain-fine-tuned models outperform unimodal baselines on VL-Commonsense, better capturing perceptual and associative properties (e.g., color, shape, co-occurrence) that text-only training underrepresents. Together, these results establish cortical dynamics as an effective supervisory signal, enabling scalable, generalizable, and brain-aligned LMs that internalize aspects of human-like multimodal representation.",
+    "keywords": "Language models;fMRI;Encoding models;naturalistic stimulus;Representation Learning;Multimodal Learning;Low-Rank Adaptation (LoRA);Transfer Learning;Neuroscience-Informed AI;Scalability;Generalizability",
+    "primary_area": "applications to neuroscience & cognitive science",
+    "supplementary_material": "",
+    "author": "",
+    "authorids": "",
+    "gender": "",
+    "homepage": "",
+    "dblp": "",
+    "google_scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "or_profile": "",
+    "aff": "",
+    "aff_domain": "",
+    "position": "",
+    "bibtex": "@misc{\nbilgin2026braininformed,\ntitle={Brain-Informed Language Model Training Enables Scalable and Generalizable Alignment with Human Brain Activity},\nauthor={Isil Poyraz Bilgin and Marie St-Laurent and Lune P Bellec and Leila Wehbe},\nyear={2026},\nurl={https://openreview.net/forum?id=07S1CPoQYP}\n}",
+    "github": "",
+    "project": "",
+    "reviewers": "tQ6j;ME8m;SFPh;Skxm",
+    "site": "https://openreview.net/forum?id=07S1CPoQYP",
+    "pdf_size": 0,
+    "rating": "2;2;2;6",
+    "confidence": "4;4;4;3",
+    "soundness": "2;3;2;2",
+    "contribution": "2;2;2;3",
+    "presentation": "2;1;2;2",
+    "wc_summary": "111;97;111;74",
+    "wc_strengths": "68;40;54;68",
+    "wc_weaknesses": "599;204;173;162",
+    "wc_questions": "167;73;37;2",
+    "wc_review": "945;414;375;306",
+    "wc_reply_reviewers": "0;0;0;0",
+    "wc_reply_authors": "0;0;0;0",
+    "reply_reviewers": "0;0;0;0",
+    "reply_authors": "0;0;0;0",
+    "rating_avg": [
+      3.0,
+      1.7320508075688772
+    ],
+    "confidence_avg": [
+      3.75,
+      0.4330127018922193
+    ],
+    "soundness_avg": [
+      2.25,
+      0.4330127018922193
+    ],
+    "contribution_avg": [
+      2.25,
+      0.4330127018922193
+    ],
+    "presentation_avg": [
+      1.75,
+      0.4330127018922193
+    ],
+    "wc_summary_avg": [
+      98.25,
+      15.122417134836613
+    ],
+    "wc_strengths_avg": [
+      57.5,
+      11.6081867662439
+    ],
+    "wc_weaknesses_avg": [
+      284.5,
+      182.22856526900495
+    ],
+    "wc_questions_avg": [
+      69.75,
+      61.503556807716414
+    ],
+    "wc_review_avg": [
+      510.0,
+      254.10726081715964
+    ],
+    "wc_reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "wc_reply_authors_avg": [
+      0,
+      0
+    ],
+    "reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "reply_authors_avg": [
+      0,
+      0
+    ],
+    "replies_avg": [
+      17,
+      0
+    ],
+    "authors#_avg": [
+      4,
+      0
+    ],
+    "corr_rating_confidence": -1.0,
+    "gs_citation": -1,
+    "gs_cited_by_link": "",
+    "gs_version_total": -1,
+    "roast": {
+      "laymen_summary": "Scientists tried to make AI more human by forcing it to study the brain scans of people binge-watching 'Friends.' They claim this 'brain-juice' training helps the AI understand the physical world better than just reading text alone.",
+      "why_bad": [
+        "Statistical insignificance: Generalizing the entire human experience based on the brain waves of only six people is a bold leap into a very small puddle.",
+        "Signal-to-noise catastrophe: fMRI data is notoriously slow and blurry; trying to use it to fine-tune a high-speed language model is like trying to teach a jet pilot how to fly by showing them a flip-book of a bird.",
+        "The 'So What?' Factor: Improving performance on a niche visual-commonsense benchmark doesn't prove the model 'understands' the world—it just means it's better at mimicking the specific noise of a human brain on caffeine."
+      ],
+      "analogy_name": "The Case of the Telepathic Stenographer",
+      "analogy_description": "Ladies and gentlemen of the jury, the prosecution claims this AI is 'brain-informed.' Imagine a courtroom stenographer who, instead of just typing the testimony, wears a heart-rate monitor synced to the Judge. The defense argues that because the stenographer’s pulse now jumps whenever the Judge gets angry, the transcript has achieved a 'higher understanding of justice.' We, the jury, see it for what it is: a typist who has simply learned to sweat in sync with their boss. You haven't built a mind; you've built a very expensive, very creepy mirror that thinks 'The One Where Ross Geller Gets a Tan' is a fundamental pillar of human cognition."
+    },
+    "review_text": ""
+  },
+  {
+    "id": "08EyZzhgl1",
+    "title": "TextME: Text-only Training for Modality Expansion via LLM Space Pivoting",
+    "track": "main",
+    "status": "Reject",
+    "tldr": "",
+    "abstract": "Expanding multimodal representations to novel modalities is constrained by reliance on large-scale paired datasets (\\eg, text–image, text–audio, text–3D, text–molecule), which are costly and often infeasible in domains requiring expert annotation such as medical imaging, 3D modeling, and molecular analysis. We introduce \\ours, to our knowledge the first framework for text-only modality expansion that removes paired data requirements. Our method leverages the universal geometric properties of pre-trained encoders—consistent modality gaps—which enable zero-shot cross-modal transfer once embedding spaces satisfy these properties. We empirically verify that these hold across audio, 3D, X-ray, and molecular domains, enabling effective cross-modal tasks without paired supervision. Furthermore, we evaluated LLM and multimodal text encoders to determine which is more effective as a unified anchor space. Experiments show that \\ours\\ achieves 91.5\\% of paired-data performance in zero-shot classification and cross-modal retrieval, while also supporting emergent capabilities between unseen modality pairs (\\eg, audio-to-3D, molecule-to-image). These results highlight text-only modality expansion as a practical and scalable path toward foundation models spanning arbitrary modalities.",
+    "keywords": "multimodal learning;modality expansion;text-only training;modality gap;cross-modal retrieval;representation alignment",
+    "primary_area": "unsupervised, self-supervised, semi-supervised, and supervised representation learning",
+    "supplementary_material": "",
+    "author": "",
+    "authorids": "",
+    "gender": "",
+    "homepage": "",
+    "dblp": "",
+    "google_scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "or_profile": "",
+    "aff": "",
+    "aff_domain": "",
+    "position": "",
+    "bibtex": "@misc{\nhong2026textme,\ntitle={Text{ME}: Text-only Training for Modality Expansion via {LLM} Space Pivoting},\nauthor={Soyeon Hong and Jinchan Kim and Jaegook You and Seungtaek Choi and Suha Kwak and Hyunsouk Cho},\nyear={2026},\nurl={https://openreview.net/forum?id=08EyZzhgl1}\n}",
+    "github": "",
+    "project": "",
+    "reviewers": "MZaU;vP1a;UG7e;1UQr",
+    "site": "https://openreview.net/forum?id=08EyZzhgl1",
+    "pdf_size": 0,
+    "rating": "2;2;4;4",
+    "confidence": "4;4;3;3",
+    "soundness": "2;2;2;3",
+    "contribution": "2;1;2;2",
+    "presentation": "2;3;3;3",
+    "wc_summary": "50;89;78;74",
+    "wc_strengths": "64;60;77;88",
+    "wc_weaknesses": "214;298;77;106",
+    "wc_questions": "2;2;481;275",
+    "wc_review": "330;449;713;543",
+    "wc_reply_reviewers": "0;0;0;0",
+    "wc_reply_authors": "0;0;0;0",
+    "reply_reviewers": "0;0;0;0",
+    "reply_authors": "0;0;0;0",
+    "rating_avg": [
+      3.0,
+      1.0
+    ],
+    "confidence_avg": [
+      3.5,
+      0.5
+    ],
+    "soundness_avg": [
+      2.25,
+      0.4330127018922193
+    ],
+    "contribution_avg": [
+      1.75,
+      0.4330127018922193
+    ],
+    "presentation_avg": [
+      2.75,
+      0.4330127018922193
+    ],
+    "wc_summary_avg": [
+      72.75,
+      14.236836024903848
+    ],
+    "wc_strengths_avg": [
+      72.25,
+      11.053845484717073
+    ],
+    "wc_weaknesses_avg": [
+      173.75,
+      88.04650759683771
+    ],
+    "wc_questions_avg": [
+      190.0,
+      201.61473160461267
+    ],
+    "wc_review_avg": [
+      508.75,
+      140.01138346577395
+    ],
+    "wc_reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "wc_reply_authors_avg": [
+      0,
+      0
+    ],
+    "reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "reply_authors_avg": [
+      0,
+      0
+    ],
+    "replies_avg": [
+      25,
+      0
+    ],
+    "authors#_avg": [
+      6,
+      0
+    ],
+    "corr_rating_confidence": -1.0,
+    "gs_citation": -1,
+    "gs_cited_by_link": "",
+    "gs_version_total": -1,
+    "roast": {
+      "laymen_summary": "The researchers tried to teach AI to understand complex things like molecules and X-rays using only text, essentially trying to skip the expensive process of showing the AI actual examples of those things paired with descriptions. They claimed they could 'guess' the connection by looking at the mathematical shadows of different data types, but the reviewers thought the shortcut was too good to be true.",
+      "why_bad": [
+        "The core assumption that all data types share 'universal geometric properties' is a massive leap of faith that ignores the messy reality of specialized domains like medical imaging.",
+        "Claiming 91.5% performance of a supervised model is the academic equivalent of saying your DIY plane is 'almost' as good as a Boeing—the missing 8.5% is usually the part that prevents a total crash.",
+        "The paper fails to account for data leakage, likely benefiting from the fact that their 'unseen' modalities were actually seen by the pre-trained models during their initial training phase."
+      ],
+      "analogy_name": "The Google Translate: Blind Date Edition",
+      "analogy_description": "In a world where 3D models speak Greek and Molecules speak Swahili, one team of researchers believes they don't need a dictionary—they just need a vibe check. [CUE EPIC HANS ZIMMER HORN]. Coming this summer: TEXTME. Watch as they try to introduce a chest X-ray to a 3D blender model, convincing themselves they’re soulmates just because they’re both standing in the same corner of the room. It’s a high-stakes romantic comedy where 'close enough' is the name of the game, and the only thing truly 'expanding' is the reviewers' blood pressure. They’re matching data based on the shape of their shadows, but when the lights come on, it’s clear the AI is just hallucinating a conversation that never happened."
+    },
+    "review_text": ""
+  },
+  {
+    "id": "0FbhKezdBK",
+    "title": "ENERGYLLM-BENCH:AREPRODUCIBLEBENCHMARKFORENERGYAND CARBONFOOTPRINTOFLARGELANGUAGEMODELS",
+    "track": "main",
+    "status": "Desk Reject",
+    "tldr": "",
+    "abstract": "Therapidgrowthoflargelanguagemodels(LLMs)hasraisedurgentconcernsabouttheirenergyfootprintduring\n trainingandinference.Existingtools,suchasMLPerfandCodeCarbon,provideonlycoarseestimatesandlack\n reproducibleprotocolsforsystem-levelevaluationofLLMefficiency.\n WeintroduceEnergyLLM-Bench,anopen-sourceframeworkthatunifiesin-looppowermeasurement,FLOPs\nbasedprediction,andstandardizedJSONLloggingintoasinglereproduciblebenchmark.Allmeasurementsare\n releasedthroughanextensiblepublicleaderboard,enablingtransparentcomparisonacrossmodels,hardware,and\n softwareconfigurations.\n Our evaluation spans dense andmixture-of-experts architectures, CPUs andGPUs, andmultiple opti\nmizer/precisionsettings.Resultsrevealseveralkeyinsights: (i)scalingGPTmodelsraisesper-tokenenergyby\n morethan3×;(ii)GPUsconsistentlydeliver4–6×higherinferenceefficiencythanCPUs;(iii)BF16precision\n reducesenergyconsumptionby10–15%relativetoFP32;and(iv)despitelowerFLOPs,mixture-of-experts\n modelscanincurorders-of-magnitudehigherrealizedcostsduetoroutingoverhead.FLOPs-basedpredictors,\n especiallygradientboosting,capturetheseefficiencytrendswithtightererrorboundsthanlinearbaselines.\n Byconsolidatingprotocol,predictors,andanopenleaderboard,EnergyLLM-Benchestablishesthefirstrepro\nduciblefoundationforanalyzingtheenergy–qualityfrontierofLLMs.Wehopeitservesasaprincipledtoolfor\n MLandsystemsresearchersworkingtowardsustainablemodeldesignanddeployment",
+    "keywords": "LLM;energy footprint",
+    "primary_area": "other topics in machine learning (i.e., none of the above)",
+    "supplementary_material": "",
+    "author": "youla yang",
+    "authorids": "~youla_yang1",
+    "gender": "",
+    "homepage": "",
+    "dblp": "",
+    "google_scholar": "",
+    "orcid": "",
+    "linkedin": "",
+    "or_profile": "",
+    "aff": "",
+    "aff_domain": "",
+    "position": "",
+    "bibtex": "@misc{\nanonymous2025energyllmbenchareproduciblebenchmarkforenergyand,\ntitle={{ENERGYLLM}-{BENCH}:{AREPRODUCIBLEBENCHMARKFORENERGYAND}  {CARBONFOOTPRINTOFLARGELANGUAGEMODELS}},\nauthor={Anonymous},\nyear={2025},\nurl={https://openreview.net/forum?id=0FbhKezdBK}\n}",
+    "github": "",
+    "project": "",
+    "reviewers": "",
+    "site": "https://openreview.net/forum?id=0FbhKezdBK",
+    "pdf_size": 0,
+    "rating": "",
+    "confidence": "",
+    "soundness": "",
+    "contribution": "",
+    "presentation": "",
+    "wc_summary": "",
+    "wc_strengths": "",
+    "wc_weaknesses": "",
+    "wc_questions": "",
+    "wc_review": "",
+    "wc_reply_reviewers": "",
+    "wc_reply_authors": "",
+    "reply_reviewers": "",
+    "reply_authors": "",
+    "rating_avg": [
+      0,
+      0
+    ],
+    "confidence_avg": [
+      0,
+      0
+    ],
+    "soundness_avg": [
+      0,
+      0
+    ],
+    "contribution_avg": [
+      0,
+      0
+    ],
+    "presentation_avg": [
+      0,
+      0
+    ],
+    "wc_summary_avg": [
+      0,
+      0
+    ],
+    "wc_strengths_avg": [
+      0,
+      0
+    ],
+    "wc_weaknesses_avg": [
+      0,
+      0
+    ],
+    "wc_questions_avg": [
+      0,
+      0
+    ],
+    "wc_review_avg": [
+      0,
+      0
+    ],
+    "wc_reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "wc_reply_authors_avg": [
+      0,
+      0
+    ],
+    "reply_reviewers_avg": [
+      0,
+      0
+    ],
+    "reply_authors_avg": [
+      0,
+      0
+    ],
+    "replies_avg": [
+      1,
+      0
+    ],
+    "authors#_avg": [
+      1,
+      0
+    ],
+    "corr_rating_confidence": 0,
+    "gs_citation": -1,
+    "gs_cited_by_link": "",
+    "gs_version_total": -1,
+    "roast": {
+      "laymen_summary": "The authors built an electricity meter for AI to prove that massive models are energy vampires. Their big discovery is that running heavy software on a CPU is slow and that bigger models cost more to run—groundbreaking stuff.",
+      "why_bad": [
+        "The 'key insights' are essentially common knowledge; stating that GPUs are more efficient than CPUs in 2024 is like 'discovering' that cars are faster than bicycles.",
+        "The paper functions more as a software manual for a wrapper tool than a novel scientific contribution to machine learning theory.",
+        "It struggles with the 'reproducibility' claim because energy metrics fluctuate wildly based on data center cooling and hardware age, factors the benchmark barely accounts for."
+      ],
+      "analogy_name": "The Smart-Toaster Triathlon",
+      "analogy_description": "Welcome back to the stadium, where EnergyLLM-Bench has just spent millions on high-tech sensors to announce that the 300-pound linebacker eats more steak than the kicker. It’s a bold strategy, Cotton! They’re meticulously tracking every calorie to confirm that sprinting uphill is harder than walking on a flat surface. The crowd is stunned—not by the data, but by the fact that someone built a professional-grade leaderboard to rank things we already knew were heavy. It’s a gold-medal performance in stating the obvious."
+    },
+    "review_text": ""
+  }
+]

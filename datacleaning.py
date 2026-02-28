@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import random
 from pathlib import Path
 import urllib.parse
 import urllib.request
@@ -18,6 +19,7 @@ class GenAIModelAdapter:
             model=self._model_name,
             contents=prompt,
         )
+
 
 def build_clients():
     api_key = os.getenv("GEMINI_API_KEY")
@@ -74,7 +76,23 @@ def get_review_text(paper_id):
         return f"Could not fetch reviews: {e}"
 
 
-def generate_roast(model, paper_data, review_text):
+def generate_roast(model, paper_data, review_text, rng):
+    prompt_variants = [
+        "Keep it punchy and witty, but never inaccurate.",
+        "Use dry humor and crisp phrasing. No fluff.",
+        "Lean into a sharp, tech-blog tone with playful jabs.",
+        "Make it sound like a candid peer review, but funny.",
+    ]
+    analogy_styles = [
+        "sports commentary",
+        "cooking show",
+        "startup pitch",
+        "movie trailer",
+        "courtroom drama",
+    ]
+    style_line = rng.choice(prompt_variants)
+    analogy_style = rng.choice(analogy_styles)
+
     prompt = f"""
     You are an expert AI researcher with a sharp, witty sense of humor. 
     Translate this rejected academic paper's failure into 'Real Talk' for laymen.
@@ -88,9 +106,10 @@ def generate_roast(model, paper_data, review_text):
     - "laymen_summary": A 2-sentence summary based on the abstract.
     - "why_bad": A list of 3 major critiques from the reviews.
     - "analogy_name": A funny, catchy name for the analogy.
-    - "analogy_description": The full analogy text.
+    - "analogy_description": The full analogy text. Use a {analogy_style} vibe.
 
     TONE: Adaptive, witty, grounded, and slightly snarky but scientifically accurate.
+    STYLE: {style_line}
     """
     response = model.generate_content(prompt)
     if hasattr(response, "text") and response.text:
@@ -111,6 +130,16 @@ def generate_roast(model, paper_data, review_text):
     return str(response)
 
 
+def parse_roast_json(roast_text):
+    text = roast_text.strip()
+    if text.startswith("```"):
+        # Strip fenced code blocks like ```json ... ```
+        lines = text.splitlines()
+        if len(lines) >= 3 and lines[0].startswith("```") and lines[-1].strip() == "```":
+            text = "\n".join(lines[1:-1]).strip()
+    return json.loads(text)
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate roasts for rejected papers.")
     parser.add_argument(
@@ -126,8 +155,30 @@ def parse_args():
     parser.add_argument(
         "--limit",
         type=int,
-        default=5,
+        default=500,
         help="Number of items to process from the input file.",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Process all items in the input file (overrides --limit and --test).",
+    )
+    parser.add_argument(
+        "--test",
+        type=int,
+        default=0,
+        help="Run a small test on N items (overrides --limit unless --all is set).",
+    )
+    parser.add_argument(
+        "--sample",
+        action="store_true",
+        help="Randomly sample items instead of taking the first N.",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=0,
+        help="Random seed for sampling and prompt variation (0 = non-deterministic).",
     )
     return parser.parse_args()
 
@@ -142,28 +193,41 @@ def main():
     with input_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
+    rng = random.Random(args.seed) if args.seed != 0 else random.SystemRandom()
+
+    if args.all:
+        items = data
+    else:
+        if args.test and args.test > 0:
+            count = args.test
+        else:
+            count = args.limit
+        if args.sample:
+            count = min(count, len(data))
+            items = rng.sample(data, count)
+        else:
+            if args.seed == 0:
+                shuffled = list(data)
+                rng.shuffle(shuffled)
+                items = shuffled[:count]
+            else:
+                items = data[:count]
+
     results = []
-    for paper in data[: args.limit]:
+    for paper in items:
         print(f"Roasting: {paper.get('title', 'Untitled')}...")
         try:
             actual_reviews = get_review_text(paper["id"])
-            roast = generate_roast(model, paper, actual_reviews)
-            results.append(
-                {
-                    "id": paper.get("id"),
-                    "title": paper.get("title"),
-                    "roast": roast,
-                    "review_text": actual_reviews,
-                }
-            )
+            roast = generate_roast(model, paper, actual_reviews, rng)
+            roast_json = parse_roast_json(roast)
+            result = dict(paper)
+            result["roast"] = roast_json
+            result["review_text"] = actual_reviews
+            results.append(result)
         except Exception as e:
-            results.append(
-                {
-                    "id": paper.get("id"),
-                    "title": paper.get("title"),
-                    "error": str(e),
-                }
-            )
+            result = dict(paper)
+            result["error"] = str(e)
+            results.append(result)
 
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
