@@ -19,7 +19,6 @@ class GenAIModelAdapter:
             contents=prompt,
         )
 
-
 def build_clients():
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -34,6 +33,7 @@ def build_clients():
     raise RuntimeError(
         "Unsupported google.genai module: missing configure/GenerativeModel and Client."
     )
+
 
 
 def fetch_openreview_notes(forum_id):
@@ -83,9 +83,12 @@ def generate_roast(model, paper_data, review_text):
     ABSTRACT: {paper_data['abstract']}
     REVIEWS: {review_text}
 
-    STRUCTURE:
-    1. The "Real Talk" Summary (2-3 sentences max).
-    2. The Hall of Fame Analogy (Give it a funny name and an analogy).
+    OUTPUT FORMAT: 
+    Return ONLY a JSON object with the following keys:
+    - "laymen_summary": A 2-sentence summary based on the abstract.
+    - "why_bad": A list of 3 major critiques from the reviews.
+    - "analogy_name": A funny, catchy name for the analogy.
+    - "analogy_description": The full analogy text.
 
     TONE: Adaptive, witty, grounded, and slightly snarky but scientifically accurate.
     """
@@ -123,7 +126,7 @@ def parse_args():
     parser.add_argument(
         "--limit",
         type=int,
-        default=50,
+        default=5,
         help="Number of items to process from the input file.",
     )
     return parser.parse_args()
