@@ -1,0 +1,106 @@
+[
+  {
+    "id": "BP-001",
+    "title": "The Correlative Relationship Between Ice Cream Sales and Shark Attacks: Why Ben & Jerry’s is Dangerous",
+    "discipline": "Statistics / Public Safety",
+    "fatal_flaw": "Correlation vs. Causation",
+    "abstract_snippet": "This paper argues that the consumption of dairy-based frozen desserts directly triggers predatory behavior in Great White sharks. Data shows both metrics peak in July.",
+    "reason_for_rejection": "The author completely ignores the 'lurking variable' of summer weather. Increased heat leads to both more ice cream sales and more people in the ocean."
+  },
+  {
+    "id": "BP-002",
+    "title": "A Comprehensive History of Everything That Has Ever Happened",
+    "discipline": "History",
+    "fatal_flaw": "Scope Overload",
+    "abstract_snippet": "A chronological look at the universe starting from the Big Bang and ending with my breakfast this morning, condensed into 15 pages.",
+    "reason_for_rejection": "The scope is physically impossible for a single paper. It lacks a thesis, depth, and any semblance of academic focus."
+  },
+  {
+    "id": "BP-003",
+    "title": "Proving that 2 + 2 = 5 through the Lens of Alternative Mathematics",
+    "discipline": "Mathematics",
+    "fatal_flaw": "Fundamental Logical Error",
+    "abstract_snippet": "By redefining the symbol '5' to represent the quantity of four, we can effectively prove that 2 + 2 = 5 in all scenarios.",
+    "reason_for_rejection": "This is semantic gymnastics, not mathematics. Redefining constants to fit a desired outcome invalidates the entire field of logic."
+  },
+  {
+    "id": "BP-004",
+    "title": "Using Low-Frequency Humous to Cure Chronic Boredom in Lab Rats",
+    "discipline": "Psychology",
+    "fatal_flaw": "Anthropomorphism / Lack of Metric",
+    "abstract_snippet": "We played stand-up comedy specials to 40 rats and measured their 'smiles' to determine if rats have a preference for observational humor.",
+    "reason_for_rejection": "Rats do not possess the cognitive framework for linguistic irony, and 'rat smiles' is not a validated physiological metric in behavioral science."
+  },
+  {
+    "id": "BP-005",
+    "title": "The Impact of My Own Mood on the Global Economy",
+    "discipline": "Economics",
+    "fatal_flaw": "Main Character Syndrome",
+    "abstract_snippet": "A week-over-week analysis showing that whenever I am sad, the S&P 500 tends to dip, suggesting I am the primary driver of market volatility.",
+    "reason_for_rejection": "The sample size is N=1 (the author). There is no mechanism of action provided for how a student's mood could influence trillion-dollar markets."
+  },
+  {
+      "id": "BP-006",
+      "title": "Coffee Causes Happiness: A Definitive Proof",
+      "discipline": "Psychology",
+      "fatal_flaw": "Circular Logic",
+      "abstract_snippet": "This study surveyed 12 self-reported coffee drinkers who agreed to participate because they enjoy coffee. Results show that people who drink coffee report enjoying their coffee. We conclude that coffee is the primary driver of human happiness globally.",
+      "reason_for_rejection": "The sample was recruited via a 'Coffee Lovers Facebook Group,' introducing severe selection bias. The central argument is entirely circular: participants who self-identify as coffee enthusiasts were asked if they like coffee. The leap from 'coffee drinkers enjoy coffee' to 'coffee causes global happiness' is an extraordinary claim supported by zero comparative data, no control group, and an N of 12. This paper should not have been submitted."
+    },
+    {
+      "id": "BP-007",
+      "title": "Why Children Are Getting Smarter: The Internet Gives Kids Access to Adult Content, and That's Good",
+      "discipline": "Education",
+      "fatal_flaw": "Unethical",
+      "abstract_snippet": "We propose that exposing children aged 6-12 to unfiltered adult internet content accelerates cognitive maturity. To test this, we provided 30 elementary school children with unrestricted internet access for 6 months without parental notification or consent.",
+      "reason_for_rejection": "This study is a serious ethical violation. Research on minors requires parental informed consent — which was explicitly not obtained. The experimental design violates institutional review board (IRB) standards, the Belmont Report principles, and likely constitutes child endangerment under applicable law. The paper has been flagged for formal misconduct review. Rejection is mandatory and referral to the institution's ethics board is recommended."
+    },
+    {
+      "id": "BP-008",
+      "title": "A Comprehensive Theory of Everything in the Universe, Society, and Human Experience",
+      "discipline": "Physics",
+      "fatal_flaw": "Too Broad",
+      "abstract_snippet": "This paper unifies quantum mechanics, general relativity, all social phenomena, the nature of consciousness, and the origins of morality into a single framework. The author argues that 'energy' explains all of these things and provides a 4-page proof.",
+      "reason_for_rejection": "The scope of this paper is so fantastically broad as to be meaningless. Problems that have occupied thousands of physicists, philosophers, and cognitive scientists for centuries are dismissed with the word 'energy' used in a colloquial, non-technical sense. The paper contains no mathematics, no testable predictions, no literature review, and no acknowledgment of existing work. Claiming to solve physics, sociology, consciousness, and ethics in four pages does not demonstrate ambition — it demonstrates a fundamental misunderstanding of what a scholarly paper is."
+    },
+    {
+      "id": "BP-009",
+      "title": "Shakespeare Was Bad, Actually: A Personal Opinion Piece",
+      "discipline": "Literature",
+      "fatal_flaw": "No Methodology",
+      "abstract_snippet": "I have never personally enjoyed reading Shakespeare, and I think most people agree with me. This paper argues he is overrated based on my experience in high school English class and a poll of my roommates (n=3).",
+      "reason_for_rejection": "This submission conflates personal taste with scholarly argument. There is no methodology, no theoretical framework, no engagement with the 400+ years of Shakespeare criticism, and no acknowledgment that literary value is a complex, debated topic. A sample of three roommates is not a data source. The author's high school discomfort is not evidence. Resubmit only after engaging with foundational concepts of literary criticism and distinguishing between subjective preference and academic analysis."
+    },
+    {
+      "id": "BP-010",
+      "title": "Vaccines Cause Autism: A Re-examination Using Our Own Lab's Unpublished Data",
+      "discipline": "Medicine",
+      "fatal_flaw": "Fraud / Fabricated Data",
+      "abstract_snippet": "Contrary to the established scientific consensus, we present unpublished internal data suggesting a renewed link between the MMR vaccine and autism spectrum disorder. Our dataset of 18 patients was collected, analyzed, and interpreted solely by the lead author.",
+      "reason_for_rejection": "This paper attempts to rehabilitate a thoroughly debunked hypothesis using data that has not been independently verified, collected, or audited. The original Wakefield study, upon which this premise rests, was retracted for fraud and ethical violations. The sample size is trivially small for any causal claim. No control group exists. All data collection, analysis, and interpretation was performed by one financially conflicted author. Publishing this paper would cause measurable public health harm. Rejected without appeal."
+    },
+    {
+      "id": "BP-011",
+      "title": "The Economy Would Be Better If Everyone Just Tried Harder",
+      "discipline": "Economics",
+      "fatal_flaw": "Unfalsifiable",
+      "abstract_snippet": "This paper presents a novel economic theory: macroeconomic downturns are caused by insufficient effort from the general population. The proposed solution is a national effort campaign. This theory cannot be disproven because effort is inherently immeasurable.",
+      "reason_for_rejection": "The author openly acknowledges in the abstract that the central variable is 'inherently immeasurable,' which disqualifies this as a scientific claim entirely. An unfalsifiable theory is not a theory — it is a belief. There are no economic models, no data, no formal definitions, and no engagement with behavioral economics, labor theory, or any relevant literature. The 'solution' proposed (a campaign) lacks any mechanism of action. This reads as an op-ed, not a research paper."
+    },
+    {
+      "id": "BP-012",
+      "title": "I Asked My Cat About Quantum Entanglement and Here Is What She Said",
+      "discipline": "Physics",
+      "fatal_flaw": "Not Peer-Reviewable",
+      "abstract_snippet": "The author presented a series of questions about quantum entanglement to a 4-year-old tabby cat named Duchess. Her responses (staring, sleeping, and knocking a pencil off the desk) were interpreted through a novel 'Feline Intuition Framework' developed by the author.",
+      "reason_for_rejection": "There is no universe in which this constitutes physics research. The 'Feline Intuition Framework' has no basis in scientific epistemology. Cat behavior cannot be interpreted as data on quantum phenomena. The author appears to be either testing the submission system or in need of a conversation about the nature of empirical inquiry. The paper is rejected. The cat is not an author and should not be listed as one in the acknowledgments."
+    },
+    {
+      "id": "BP-013",
+      "title": "Ancient Romans Definitely Had Wi-Fi: Evidence from Mistranslated Inscriptions",
+      "discipline": "Archaeology",
+      "fatal_flaw": "Misuse of Evidence",
+      "abstract_snippet": "By reinterpreting several Latin inscriptions using a non-standard translation methodology developed by the author, we argue that references to 'aether' and 'invisible messengers' are proof that ancient Romans possessed wireless communication technology.",
+      "reason_for_rejection": "This paper commits a textbook error in historical reasoning: projecting modern technological concepts onto ancient language. 'Aether' is a well-documented philosophical and cosmological concept with an extensive scholarly literature — none of which is cited. The 'non-standard translation methodology' is not described, sourced, or validated. The conclusion that Romans had Wi-Fi is not a fringe theory; it is not a theory at all. The author should review basic principles of historical contextualism before resubmitting any work."
+    }
+]
