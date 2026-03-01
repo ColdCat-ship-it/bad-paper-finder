@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional, List
+from typing import Optional, List, Any, Dict
 from typing import Any, Dict
 
 # What the user sends to create a paper
@@ -13,6 +13,15 @@ class PaperCreate(BaseModel):
 # What the API returns (includes similarity score for search)
 class PaperRead(PaperCreate):
     relevance_score: Optional[float] = None
+    rating: Optional[str] = None
+    roast: Optional[Dict[str, Any]] = None
+
+# Partial update payload (id is immutable)
+class PaperUpdate(BaseModel):
+    title: Optional[str] = Field(None, min_length=3)
+    abstract: Optional[str] = Field(None, min_length=3)
+    conference: Optional[str] = None
+    keywords: Optional[List[str]] = None
     rating: Optional[str] = None
     roast: Optional[Dict[str, Any]] = None
 

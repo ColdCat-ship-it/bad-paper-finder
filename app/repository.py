@@ -125,6 +125,54 @@ class PaperRepository:
         self.collection.delete(ids=ids_to_delete)
         return len(ids_to_delete)
 
+    def update_by_id(self, paper_id, updates):
+        res = self.collection.get(ids=[paper_id], include=["ids", "documents", "metadatas"])
+        if not res.get("ids"):
+            return None
+
+        meta = res["metadatas"][0] or {}
+        doc = res["documents"][0] or ""
+
+        title = meta.get("title", "")
+        conference = meta.get("conference") or meta.get("conf") or ""
+        keywords = meta.get("keywords")
+        rating = meta.get("rating")
+        roast = meta.get("roast")
+
+        if "title" in updates:
+            title = updates["title"]
+        if "abstract" in updates:
+            doc = updates["abstract"] or ""
+        if "conference" in updates:
+            conference = updates["conference"]
+        if "keywords" in updates:
+            keywords = updates["keywords"]
+        if "rating" in updates:
+            rating = updates["rating"]
+        if "roast" in updates:
+            roast = updates["roast"]
+
+        metadata = {
+            "title": title or "",
+            "conference": conference or "",
+        }
+        if keywords is not None:
+            metadata["keywords"] = keywords
+        if rating is not None:
+            metadata["rating"] = rating
+        if roast is not None:
+            metadata["roast"] = roast
+
+        emb = self.model.encode(doc)
+        self.collection.delete(ids=[paper_id])
+        self.collection.add(
+            ids=[paper_id],
+            embeddings=[emb],
+            documents=[doc],
+            metadatas=[metadata],
+        )
+        return self._build_paper(paper_id, doc, metadata)
+
     def _build_paper(self, paper_id, document, metadata):
         meta = metadata or {}
         keywords = meta.get("keywords")

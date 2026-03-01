@@ -1,8 +1,5 @@
-# Find you Favorite Bad Paper
+# Find your Favorite Bad Paper
 
-## How to Start
+## This is the Source Code with Some Datasets Available
 
-```pip install -r requirement.txt```
- 
- 
-python app.py
+The documentation is on: https://worst-paper-api-697321433751.us-central1.run.app/docs

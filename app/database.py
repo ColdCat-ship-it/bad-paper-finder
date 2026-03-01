@@ -116,14 +116,26 @@ class SimpleCollection:
 # Shared instances
 _model = SimpleHashEmbedder()
 _collection = SimpleCollection("rejected_papers", _model)
-_DATA_PATH = Path(__file__).resolve().parents[1] / "roasted_db.json"
+_DATA_PATHS = [
+    Path(__file__).resolve().parents[1] / "failed_iclr_more_db.json",
+    # Path(__file__).resolve().parents[1] / "roasted_icml_db.json",
+    Path(__file__).resolve().parents[1] / "roasted_nips_db.json",
+]
 
 def init_db():
-    """Loads data.json into memory if the collection is empty."""
-    if _collection.count() == 0:
-        with open(_DATA_PATH, "r", encoding="utf-8") as f:
+    """Loads/merges JSON files into memory, skipping already-loaded ids."""
+    existing = _collection.get(include=["ids"]) if _collection.count() > 0 else {"ids": []}
+    seen_ids = set(existing.get("ids") or [])
+    for path in _DATA_PATHS:
+        if not path.exists():
+            continue
+        with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
             for item in data:
+                paper_id = item.get("id")
+                if not paper_id or paper_id in seen_ids:
+                    continue
+                seen_ids.add(paper_id)
                 abstract = item.get("abstract") or item.get("abstract_snippet") or ""
                 embedding = _model.encode(abstract)
                 metadata = {
@@ -139,7 +151,7 @@ def init_db():
                     else:
                         metadata["keywords"] = keywords
                 _collection.add(
-                    ids=[item["id"]],
+                    ids=[paper_id],
                     embeddings=[embedding],
                     documents=[abstract],
                     metadatas=[metadata],

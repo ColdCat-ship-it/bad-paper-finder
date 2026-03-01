@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.routes import papers
 from app.database import init_db
 
@@ -8,6 +9,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Allow cross-origin requests
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # 1. Initialize the Database/Collection on startup
 @app.on_event("startup")
 def startup_event():
